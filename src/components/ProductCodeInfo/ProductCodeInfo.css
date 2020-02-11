@@ -1,0 +1,16 @@
+.product_code-info{
+    width: 746px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product_status{
+    float: right;
+    color: #093;
+    font-size: 14px;
+    border-bottom: 1px dotted #093;
+    cursor: pointer;
+    height: 18px;
+}

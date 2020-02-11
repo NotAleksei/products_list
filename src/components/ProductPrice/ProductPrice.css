@@ -1,0 +1,16 @@
+.product_price{
+    display: flex;
+    flex-direction: column;
+    height: 103px;
+}
+
+.product-gold-price-block{
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+}
+.product-price-block{
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+}
