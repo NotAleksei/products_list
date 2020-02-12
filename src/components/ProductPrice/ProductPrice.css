@@ -1,16 +1,107 @@
 .product_price{
     display: flex;
-    flex-direction: column;
+    width: 270px;
     height: 103px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 10px;
 }
 
 .product-gold-price-block{
     display: flex;
+    width: 180px;
     justify-content: space-between;
-    height: 50%;
+    align-items: flex-end;
 }
+
+.product-gold-price-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    margin-right: 4px;
+}
+
+.goldPrice{
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 8px;
+    color: #000;
+}
+.rouble__i{
+    width: 27px;
+    height: 20px
+}
+#rouble__b{
+    width: 19px;
+    height: 19px
+}
+
 .product-price-block{
     display: flex;
-    justify-content: space-between;
-    height: 50%;
+    width: 180px;
+    justify-content: flex-end;
+    color: #a7a7a7;
+    font-size: 25px;
+}
+
+#rouble__g{
+    margin-left: 8px;
+    width: 19px;
+    height: 19px
+}
+
+.product-points-price-block{
+    width: 180px;
+    text-align: right;
+    margin: 2px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #999;
+}
+
+.product_units{
+    display: flex;
+    justify-content: flex-end;
+    width: 180px;
+
+}
+.unit--active{
+    background: #000;
+    cursor: default;
+}
+
+.product_units 
+.unit--select
+ {
+    padding: 3px 5px;
+    margin: 0 0 0 5px;
+    cursor: pointer;
+}
+
+
+.product_units 
+.unit--select.unit--active 
+p {
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    margin: 0;
+}
+
+.product_units 
+.unit--select 
+p{
+    font-size: 13px;
+    line-height: 13px;
+    color: #707070;
+    border-bottom: 1px dotted #707070;
+    transition: .2s;
+    -webkit-transition: .2s;
+    margin: 0;
+}
+
+.product_units 
+.unit--select 
+p:hover{
+    border-bottom: none;
 }

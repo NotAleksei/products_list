@@ -1,4 +1,5 @@
 .product_cart{
     display: flex;
+    width: 270px;
     flex-direction: column;
 }
