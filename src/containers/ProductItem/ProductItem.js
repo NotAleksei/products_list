@@ -13,8 +13,10 @@ class ProductItem extends React.Component {
     return (
         <div className="product_item">
           <ProductPhoto url = {this.props.product.primaryImageUrl}/>
-          <ProductCodeInfo productInfo = {this.props.product}/>
-          <MainInfo productInfo = {this.props.product}/>
+          <div className="product_item-info__wrapper">
+            <ProductCodeInfo productInfo = {this.props.product}/>
+            <MainInfo productInfo = {this.props.product}/>
+          </div>
         </div>
     );
   }

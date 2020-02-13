@@ -1,7 +1,4 @@
 .product_main-info{
-    width: 746px;
     height: 228px;
     display: flex;
-    
-    box-sizing: border-box;
 }
