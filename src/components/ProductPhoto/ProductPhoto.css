@@ -17,3 +17,18 @@
     width: 160px;
     height: 160px;
 }
+
+
+@media (max-width: 1249px) and (min-width: 1000px){
+    .product_photo{
+        width: 160px;
+        height: 160px;
+      }
+  }
+
+
+@media (max-width: 999px) and (min-width: 0px){
+    .product_photo{
+      float: none;
+    }
+  }

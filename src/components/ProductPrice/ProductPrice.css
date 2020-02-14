@@ -105,3 +105,14 @@ p{
 p:hover{
     border-bottom: none;
 }
+
+
+@media (max-width: 999px) and (min-width: 0px){
+    .product-points-price-block{
+        display: none;
+    }
+    .product_price{
+        width: auto;
+        height: 90px;
+    }
+  }

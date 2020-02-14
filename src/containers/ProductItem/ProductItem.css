@@ -1,8 +1,25 @@
 .product_item{
-  display: flex;
   width: 1000px;
-  height: 270px;
+  height: 240px;
   margin: 5px;
   border: 1px solid #e0e0e0;
   padding: 10px;
+}
+
+
+@media (max-width: 1249px) and (min-width: 1000px){
+  .product_item {
+    width: 720px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 999px) and (min-width: 0px){
+  .product_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    height: 450px;
+  }
 }

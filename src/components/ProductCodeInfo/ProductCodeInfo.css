@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     height: 26px;
-    padding: 0px 0px 0 19px;
+    padding: 0px 0px 0px 19px;
 }
 
 .product_status{
@@ -21,3 +21,18 @@
 .product_status:hover{
    border-bottom: none;
 }
+
+@media (max-width: 1249px) and (min-width: 1000px){
+    .product_code-info {
+        width: 180px;
+        padding-left: 10px;
+    }
+  }
+
+@media (max-width: 999px) and (min-width: 0px){
+    .product_code-info{
+        order: -1;
+        width: 210px;
+        padding: 0
+    }
+  }

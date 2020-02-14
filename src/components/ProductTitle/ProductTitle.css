@@ -5,7 +5,7 @@
 .product_description{
     float: left;
     padding: 10px 20px 0 19px;
-    width: 505px;
+    width: 500px;
     font-size: 16px;
     line-height: 24px;
     margin: 0;
@@ -50,3 +50,33 @@
     border-bottom: 1px solid grey;
 }
 
+
+
+  @media (max-width: 1249px) and (min-width: 1000px){
+ 
+    .product_title{
+        width: 330px;
+        padding-left: 10px;
+    }
+    .product_description,
+    .product_tags {
+        width: 330px;
+        padding-left: 0px
+      }
+  }
+
+
+@media (max-width: 999px) and (min-width: 0px){
+    .product_title{
+      width: auto;
+    }
+    .product_description{
+        width: auto;
+        font-size: 14px;
+        line-height: 20px;
+        padding-top: 0px;
+    }
+    .product_tags{
+        display: none;
+    }
+  }

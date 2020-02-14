@@ -24,7 +24,7 @@ const ProductToCart = props => {
                         <path d="m16.476 11.619h.952l1.905-8.571h-.952l-1.905 8.571"></path>
                     </svg>
                 </svg>
-                <span className='ng-binding'>в корзину</span>
+                <span className='ng-binding' data-product-id = {props.productInfo.productId}>в корзину</span>
             </div>
         </div>
     )

@@ -3,3 +3,18 @@
     width: 270px;
     flex-direction: column;
 }
+
+
+@media (max-width: 1249px) and (min-width: 1000px){
+    .product_cart {
+        position: relative;
+        bottom: 40px;
+        right: 50px 
+    }
+  }
+
+@media (max-width: 999px) and (min-width: 0px){
+    .product_cart{
+        width: auto;
+    }
+  }

@@ -3,8 +3,13 @@ import './ProductTitle.css';
 
 
 const ProductTitle = props => {
-    const assocProductsArr = props.productInfo.assocProducts.split(';')
-    let assocProducts = assocProductsArr.map((item)=>{
+    const assocProductsArr = props.productInfo.assocProducts.split(';') 
+    const assocProducts = assocProductsArr.map((item, index)=>{
+        if(assocProductsArr.length-2 === index && item[item.length-1] != '.'){
+            return item ? <a href ='#' className='url--link'> {item}.</a> : null
+        } else if (item[item.length-1] === '.') {
+            return <a href ='#' className='url--link'> {item}</a>
+        }
         return item ? <a href ='#' className='url--link'> {item},</a> : null
     })
     return(

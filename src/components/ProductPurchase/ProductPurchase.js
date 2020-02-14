@@ -27,7 +27,7 @@ class ProductPurchase extends React.Component {
         }
     }
 
-
+    
     render(){
         const productAltUnit = this.props.productInfo.unit === this.props.productInfo.unitAlt ?
         <p className='product_one-units'>
@@ -40,7 +40,7 @@ class ProductPurchase extends React.Component {
                     <p>
                         <span className='ng-binding'> Продается {this.props.productInfo.unitFull === "упаковка" ? 'упаковками' : this.props.productInfo.unitFull === "штука" ? 'штуками' : 'метрами погонными'}:</span>
                         <br/>
-                        <span className='unit--infoInn'> {+this.props.productInfo.unitRatio * this.state.value} {this.props.productInfo.unit} = {+this.props.productInfo.unitRatioAlt.toFixed(2)* this.state.value} {this.props.productInfo.unitAlt}</span>
+                        <span className='unit--infoInn'> {+this.props.productInfo.unitRatio * this.state.value} {this.props.productInfo.unit} = {(+this.props.productInfo.unitRatioAlt.toFixed(2)* this.state.value).toFixed(2)} {this.props.productInfo.unitAlt}</span>
                     </p>
                 </div>
             </div>
@@ -54,6 +54,7 @@ class ProductPurchase extends React.Component {
                     handleDown = {()=>this.handleDown()}
                     handleChange ={(event)=>this.handleChange(event)} 
                     value={this.state.value}
+                    productInfo = {this.props.productInfo}
                 />
             </div>
         )
