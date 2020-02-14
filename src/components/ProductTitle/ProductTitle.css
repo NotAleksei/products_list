@@ -74,7 +74,7 @@
         width: auto;
         font-size: 14px;
         line-height: 20px;
-        padding-top: 0px;
+        padding: 0px;
     }
     .product_tags{
         display: none;

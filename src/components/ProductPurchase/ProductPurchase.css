@@ -46,16 +46,23 @@
 .list--unit-desc .unit--desc-i {
     display: inline-block;
     vertical-align: top;
-        width: 15px;
+    width: 15px;
     height: 15px;
     margin: 8px 10px 0 0;
     background: url(../../img/product/unit--i.png) 50% no-repeat;
     background-size: cover;
+    padding: 5px 10px 0px 10px;
 }
 .list--unit-desc .unit--desc-t p {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 15px;
+    height: 35px;
+    width: 180px;
     margin: 0;
+}
+
+.unit--desc-t{
+
 }
 
 .product_one-units{

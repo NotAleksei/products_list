@@ -34,7 +34,7 @@ class ProductPrice extends React.Component {
                 <div className='product-gold-price-block'>
                     <span className='product-gold-price-text'>По карте<br/>клуба</span>
                     <div>
-                    <span className='goldPrice'>{this.state.type === 'unit' ? this.props.productInfo.priceGold : (this.props.productInfo.priceGold * this.props.productInfo.unitRatioAlt).toFixed(2)}</span>
+                    <span className='goldPrice'>{this.state.type === 'unit' ? this.props.productInfo.priceGold.toFixed(2) : this.props.productInfo.priceGoldAlt.toFixed(2)}</span>
                     <span className='rouble__i'>
                     <svg version="1.0" id="rouble__b" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="30px" height="22px" viewBox="0 0 50 50" enableBackground="new 0 0 50 50">
                         <svg id='rouble_black'>
@@ -46,7 +46,7 @@ class ProductPrice extends React.Component {
                     
                 </div>
                 <div className='product-price-block'>
-                    <span className='retailPrice'>{this.state.type === 'unit' ? this.props.productInfo.priceRetail : (this.props.productInfo.priceRetail*this.props.productInfo.unitRatioAlt).toFixed(2)}</span>
+                    <span className='retailPrice'>{this.state.type === 'unit' ? this.props.productInfo.priceRetail.toFixed(2) : this.props.productInfo.priceRetailAlt.toFixed(2)}</span>
                     <span className='rouble__i'>
                         <svg version="1.0" id="rouble__g" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="30px" height="22px" viewBox="0 0 50 50" enableBackground="new 0 0 50 50">
                             <svg id='rouble_g'>
