@@ -115,4 +115,7 @@ p:hover{
         width: auto;
         height: 90px;
     }
+    .product-gold-price-block{
+        width: 200px;
+    }
   }
