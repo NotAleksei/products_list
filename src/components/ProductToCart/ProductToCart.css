@@ -23,11 +23,13 @@
     padding: 12px 0 10px;
     text-align: center;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
 .stepper-arrow_wrapper{
     display: flex;
     flex-direction: column;
@@ -36,6 +38,7 @@ input::-webkit-inner-spin-button {
 .stepper-arrow {
     background: url(../../img/product/jquery.fs.stepper-arrows.png) no-repeat #fff;
 }
+
 .stepper 
 .stepper-arrow {
     cursor: pointer;
@@ -52,13 +55,13 @@ input::-webkit-inner-spin-button {
     border-top: none;
     border-right: none;
 }
+
 .product_count_wrapper 
 .stepper-arrow.up:hover,
 .product_count_wrapper 
 .stepper-arrow.down:hover {
     background-color: #666;
 }
-
 
 .product_count_wrapper 
 .stepper-arrow.down {
@@ -83,12 +86,14 @@ input::-webkit-inner-spin-button {
     font: 14px/40px Arial,Helvetica,sans-serif;
     cursor: pointer;
 }
+
 .ic_cart {
     width: 20px;
     height: 20px;
     background: none;
     fill: #fff;
 }
+
 .btn_cart:hover{
     background: #333;
 }

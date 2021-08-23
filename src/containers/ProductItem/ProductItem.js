@@ -4,10 +4,7 @@ import ProductPhoto from '../../components/ProductPhoto/ProductPhoto'
 import ProductCodeInfo from '../../components/ProductCodeInfo/ProductCodeInfo'
 import MainInfo from '../../components/MainInfo/MainInfo'
 
-
-
 class ProductItem extends React.Component {
-  
 
   render(){
     return (

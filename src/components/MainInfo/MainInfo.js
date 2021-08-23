@@ -3,7 +3,6 @@ import './MainInfo.css';
 import ProductTitle from '../ProductTitle/ProductTitle'
 import ProductCart from '../ProductCart/ProductCart'
 
-
 const MainInfo = props => {
     return(
         <div className='product_main-info'>

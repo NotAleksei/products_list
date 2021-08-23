@@ -2,45 +2,46 @@ import React from 'react'
 import './ProductPurchase.css';
 import ProductToCart from '../ProductToCart/ProductToCart'
 
-
 class ProductPurchase extends React.Component {
-    
+
     state = {
-        value: 1,
+        countProduct: 1,
     }
 
     handleChange(event) {
-        if( event.target.value != 'e' && event.target.value > 0){
-            this.setState({value: event.target.value});
+        if (event.target.countProduct !== 'e' && event.target.value > 0) {
+            this.setState({countProduct: event.target.value});
         }
     }
 
     handleUp() {
-        const value = this.state.value + 1
-        this.setState({value: value});
+        this.setState({countProduct: this.state.countProduct + 1});
     }
 
     handleDown() {
-        if(this.state.value > 1){
-            const value = this.state.value - 1
-            this.setState({value: value});
+        if (this.state.countProduct > 1) {
+            this.setState({countProduct: this.state.countProduct - 1});
         }
     }
-
     
-    render(){
-        const productAltUnit = this.props.productInfo.unit === this.props.productInfo.unitAlt ?
-        <p className='product_one-units'>
+    render() {
+        const productInfo = this.props.productInfo;
+        const productAltUnit = productInfo.unit === productInfo.unitAlt
+        ? <p className='product_one-units'>
             Цена за штуку
-        </p>:
-        <div className='list--unit-desc'>
+        </p>
+        : <div className='list--unit-desc'>
             <div className='unit--info'>
                 <div className='unit--desc-i'></div>
                 <div className='unit--desc-t'>
                     <p>
-                        <span className='ng-binding'> Продается {this.props.productInfo.unitFull === "упаковка" ? 'упаковками' : this.props.productInfo.unitFull === "штука" ? 'штуками' : 'метрами погонными'}:</span>
+                        <span className='ng-binding'>
+                            Продается {productInfo.unitFull === "упаковка" ? 'упаковками' : productInfo.unitFull === "штука" ? 'штуками' : 'метрами погонными'}:
+                        </span>
                         <br/>
-                        <span className='unit--infoInn'> {+this.props.productInfo.unitRatio * this.state.value} {this.props.productInfo.unit} = {(+this.props.productInfo.unitRatioAlt.toFixed(2)* this.state.value).toFixed(2)} {this.props.productInfo.unitAlt}</span>
+                        <span className='unit--infoInn'>
+                            {+productInfo.unitRatio * this.state.countProduct} {productInfo.unit} = {(+productInfo.unitRatioAlt.toFixed(2)* this.state.countProduct).toFixed(2)} {productInfo.unitAlt}
+                        </span>
                     </p>
                 </div>
             </div>
@@ -53,8 +54,8 @@ class ProductPurchase extends React.Component {
                     handleUp = {()=>this.handleUp()}
                     handleDown = {()=>this.handleDown()}
                     handleChange ={(event)=>this.handleChange(event)} 
-                    value={this.state.value}
-                    productInfo = {this.props.productInfo}
+                    value={this.state.countProduct}
+                    productInfo = {productInfo}
                 />
             </div>
         )

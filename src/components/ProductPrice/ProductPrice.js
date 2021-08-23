@@ -1,7 +1,6 @@
 import React from 'react'
 import './ProductPrice.css';
 
-
 class ProductPrice extends React.Component {
 
     state = {
@@ -16,20 +15,22 @@ class ProductPrice extends React.Component {
         this.setState({type: 'unitAlt'});
     }
 
-    render(){
+    render() {
         const classesUnit = [
             'unit--select' 
         ]
-    
+
         const classesUnitAlt = [
             'unit--select' 
         ]
-        if(this.state.type === 'unit'){
-            classesUnit.push('unit--active')
+
+        if (this.state.type === 'unit') {
+            classesUnit.push('unit--active');
         } else {
-            classesUnitAlt.push('unit--active')
+            classesUnitAlt.push('unit--active');
         }
-        return(
+
+        return (
             <div className='product_price'>
                 <div className='product-gold-price-block'>
                     <span className='product-gold-price-text'>По карте<br/>клуба</span>
@@ -43,7 +44,6 @@ class ProductPrice extends React.Component {
                     </svg>
                     </span>
                     </div>
-                    
                 </div>
                 <div className='product-price-block'>
                     <span className='retailPrice'>{this.state.type === 'unit' ? this.props.productInfo.priceRetail.toFixed(2) : this.props.productInfo.priceRetailAlt.toFixed(2)}</span>
@@ -58,19 +58,19 @@ class ProductPrice extends React.Component {
                 <div className='product-points-price-block'>
                     <span className="ng-binding">можно купить за {this.props.productInfo.bonusAmount} балла</span>
                 </div>
-            {this.props.productInfo.unit === this.props.productInfo.unitAlt ? null :
+            {this.props.productInfo.unit !== this.props.productInfo.unitAlt &&
                 <div className='product_units'>
                     <div className={classesUnit.join(' ')} onClick={()=>this.handleTypeUnit()}>
                         <p className='ng-binding'>За {this.props.productInfo.unitAlt}</p>
                     </div>
                     <div className={classesUnitAlt.join(' ')} onClick={()=>this.handleTypeUnitAlt()}>
-                        <p className='ng-binding'>За {this.props.productInfo.unitFull === "упаковка" ? 'упаковку' : this.props.productInfo.unit}</p>
+                        <p className='ng-binding'>За {this.props.productInfo.unitFull === "упаковка" ? "упаковку" : this.props.productInfo.unit}</p>
                     </div>
-                </div>}
+                </div>
+            }
             </div>
         )
     }
 }
-
 
 export default ProductPrice

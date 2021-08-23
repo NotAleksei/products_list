@@ -1,7 +1,6 @@
 import React from 'react'
 import './ProductToCart.css';
 
-
 const ProductToCart = props => {
 
     return(
