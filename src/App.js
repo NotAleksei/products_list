@@ -11,7 +11,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // fetch('http://localhost:3000/products.json')
     fetch('https://notaleksei.github.io/products_list/products.json')
       .then(response => response.json())
       .then(products => this.setState({ products }));
